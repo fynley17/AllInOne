@@ -1,21 +1,17 @@
 {
-  "name": "Vue + PHP + MySQL Dev Container",
-  "dockerComposeFile": ["../docker-compose.yml"],
-  "service": "php",
-  "workspaceFolder": "/workspace",
+  "name": "Staff Enrolment - Dev Container",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "backend",
+  "workspaceFolder": "/workspaces/ALLINONE",
+  "forwardPorts": [80,5173],
   "customizations": {
     "vscode": {
       "extensions": [
-        "octref.vetur",          // Vue support
-        "esbenp.prettier-vscode",// Code formatter
-        "xdebug.php-pack",       // PHP tools
-        "bmewburn.vscode-intelephense-client" // PHP IntelliSense
-      ],
-      "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-      }
+        "ms-azuretools.vscode-docker", // Docker Support
+        "bmewburn.vscode-intelephense-client", // PHP IntelliSense
+        "geeebe.duplicate" // Duplicate Line 'Ctrl + D'
+      ]
     }
-  },
-  "postCreateCommand": "npm install --prefix frontend && composer install",
-  "remoteUser": "vscode"
+  }
 }
+  
