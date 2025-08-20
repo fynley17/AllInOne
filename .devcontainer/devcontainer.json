@@ -1,0 +1,21 @@
+{
+  "name": "Vue + PHP + MySQL Dev Container",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "php",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "octref.vetur",          // Vue support
+        "esbenp.prettier-vscode",// Code formatter
+        "xdebug.php-pack",       // PHP tools
+        "bmewburn.vscode-intelephense-client" // PHP IntelliSense
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+  "postCreateCommand": "npm install --prefix frontend && composer install",
+  "remoteUser": "vscode"
+}
